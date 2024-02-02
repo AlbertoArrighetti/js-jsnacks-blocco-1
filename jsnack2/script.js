@@ -3,6 +3,8 @@
 
 // Il programma stampa la somma di tutti i numeri inseriti.
 
+
+
 // creo un array per contenere i numeri inseriti
 let numberArray = [];
 // dichiaro già la somma
