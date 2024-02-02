@@ -2,24 +2,32 @@
 // Il software stampa prima la parola più corta,
 // poi la parola più lunga.
 
+
+
 // chiedo all'utente di inserire 2 parole
 const firstWord = prompt("Inserire la prima parola.");
 const secondWord = prompt("Inserire la seconda parola.");
 
+// prelevo l'elemento html
+const resultElement = document.querySelector(".result");
+let confront;
+
 // creo il controllo con if e else per verificare le due parole
-// sapendo che ci sono 3 casi
-
-// creo una variabile per capire se le condizioni si avverano
-let flag;
-
 if (firstWord.length > secondWord.length) {
-    flag = "maggiore";
+    // se la prima è più lunga
+    confront = `La parola: ${firstWord} <br>
+    è più lunga della parola: ${secondWord}`;
+
 }else if (firstWord.length < secondWord.length) {
-    flag = "minore";
+    // se la seconda è più lunga 
+    confront = `La parola: ${secondWord} <br>
+    è più lunga della parola: ${firstWord}`;
+
 } else {
-    flag = "uguale";
+    // se sono uguali
+    confront = `La parole: ${firstWord} e ${secondWord} sono uguali`;
 }
 
 
-// verifico il risultato
-console.log(flag);
+// scrivo il riusltato in pagina
+resultElement.innerHTML = confront
