@@ -24,6 +24,8 @@ for (let i = 0; i < 10; i++) {
     console.log("numero :" + sum);
 
 
+    document.querySelector(".number-choosed").innerHTML = "I numeri inseriti sono: " + numberArray;
+    document.querySelector(".sum-of-all").innerHTML = "la somma dei numeri è: " + sum;
 }
 
 
