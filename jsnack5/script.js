@@ -11,17 +11,24 @@ const userNumber = prompt("Inserisci un numero.");
 const userNumberArray = [userNumber];
 
 
-// creo un ciclo che mi dia tutti i numeri fino a quello inserito 
-for (i = 1; i <= userNumberArray; i++){
-    // numeri elevati al cubo
-    let cubeCalc = (i * i * i);
+if (!isNaN(userNumber)) {
     
-    
-    // stampa dei numeri
-    document.querySelector(".user-numbers").innerHTML = "il numero da te inserito è: " + userNumber;
-    // stampa numeri elevati al cubo
-    document.querySelector(".cube-numbers").innerHTML += "numero " + i + " = " + cubeCalc + "<br>" ;
-  
-    // log
-    // console.log(cubeCalc);
+    // creo un ciclo che mi dia tutti i numeri fino a quello inserito 
+    for (i = 1; i <= userNumberArray; i++){
+        // numeri elevati al cubo
+        let cubeCalc = (i * i * i);
+        
+        
+        // stampa dei numeri
+        document.querySelector(".user-numbers").innerHTML = "il numero da te inserito è: " + userNumber;
+        // stampa numeri elevati al cubo
+        document.querySelector(".cube-numbers").innerHTML += "numero " + i + " = " + cubeCalc + "<br>" ;
+      
+        // log
+        // console.log(cubeCalc);
+    }
+}else {
+    alert("Inserire un numero.")
 }
+
+
