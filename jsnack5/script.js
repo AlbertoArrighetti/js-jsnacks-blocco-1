@@ -7,15 +7,17 @@
 
 // utente inserisce un numero
 const userNumber = prompt("Inserisci un numero.");
-// creo un array che contenga il numero dell'utente
-const userNumberArray = [userNumber];
 
 
 if (!isNaN(userNumber)) {
     
     // creo un ciclo che mi dia tutti i numeri fino a quello inserito 
-    for (i = 1; i <= userNumberArray; i++){
+    for (let i = 1; i <= userNumber; i++){
+
         // numeri elevati al cubo
+        // posso usare anche math.pow(i, 3); oppure i ** 3;
+
+        
         let cubeCalc = (i * i * i);
         
         
@@ -23,9 +25,6 @@ if (!isNaN(userNumber)) {
         document.querySelector(".user-numbers").innerHTML = "il numero da te inserito è: " + userNumber;
         // stampa numeri elevati al cubo
         document.querySelector(".cube-numbers").innerHTML += "numero " + i + " = " + cubeCalc + "<br>" ;
-      
-        // log
-        // console.log(cubeCalc);
     }
 }else {
     alert("Inserire un numero.")

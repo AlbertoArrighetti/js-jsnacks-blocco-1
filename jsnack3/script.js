@@ -7,7 +7,7 @@
 
 
 // creo un array per contenere i numeri inseriti
-let numbersOddArray = [];
+const numbersOddArray = [];
 
 
 // creare un ciclo FOR che chiede il numero 6 volte
@@ -17,16 +17,19 @@ for (let i = 0; i < 6; i++) {
     // inserisco il prompt per chiedere i numeri
     const numbers = Number(prompt(`inserisci il ${i + 1}° numero`));
 
+    // controllo che sia un dato valido
+    if(numbers == null || isNaN(numbers)){
 
-    if (numbers % 2 !== 0){
-        // inserire i numeri nell'array con .push solo se risultano dispari
-        numbersOddArray.push(numbers);
+        alert("inserisci un dato valido.")
+    
+    }else {
+        if (numbers % 2 != 0){
+            // inserire i numeri nell'array con .push solo se risultano dispari
+            numbersOddArray.push(numbers);
+        }
     }
-
-    // stampa array a schermo con numeri 
-    document.querySelector(".number-odd").innerHTML = `i numeri dispari inseriti sono: <br>` + numbersOddArray;
-
-
-    // log
-    console.log(numbersOddArray);
+    
 }
+
+// stampa array a schermo con numeri 
+document.querySelector(".number-odd").innerHTML = `i numeri dispari inseriti sono: <br>` + numbersOddArray;

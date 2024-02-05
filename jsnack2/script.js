@@ -17,19 +17,19 @@ for (let i = 0; i < 10; i++) {
     // inserisco il prompt per chiedere i numeri
     const numbers = Number(prompt(`inserisci il ${i + 1}° numero da sommare`));
 
-    // variabile per ottenere la somma
-    sum = sum + numbers;
-    // inserire i numeri nell'array con .push
-    numberArray.push(numbers);
-    
-    console.log(numberArray);
-    console.log("numero :" + sum);
+
+    if(numbers == null || isNaN(numbers)){
+        alert("inserisci un dato valido.");
+    }else{
+
+            // variabile per ottenere la somma
+            sum = sum + numbers;
+            // inserire i numeri nell'array con .push
+            numberArray.push(numbers);
+    }
+
+}
 
 
     document.querySelector(".number-choosed").innerHTML = "I numeri inseriti sono: " + numberArray;
     document.querySelector(".sum-of-all").innerHTML = "la somma dei numeri è: " + sum;
-}
-
-
-
-console.log(sum);

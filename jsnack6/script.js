@@ -9,7 +9,7 @@ let avarage = 0;
 
 
 // creo un ciclo FOR per generare i primi 10 numeri (da 1 a 10)
-for (i = 1; i <= 10; i++){
+for (let i = 1; i <= 10; i++){
 
     // somma
     sum += i;

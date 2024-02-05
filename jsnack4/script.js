@@ -2,35 +2,47 @@
 // e calcola la somma di tutte le cifre che compongono il numero.
 
 
-// creo un array per contenere il numero
-let numberArray = [];
+
 
 // prompt per il numero a 4 cifre
-let number = prompt("Inserire numero a 4 cifre:");
-
+const number = prompt("Inserire numero a 4 cifre:");
 // dichiaro variabile somma
 let sum = 0;
 
-// controllo che il numero sia a 4 cifre
-if (!isNaN(number) && number.length === 4) {
-    
-    // inserire i numeri nell'array con .push
-    numberArray.push(number);  
-    
-    let digit1 = Math.floor(number[0]);
-    let digit2 = Math.floor(number[1]);
-    let digit3 = Math.floor(number[2]);
-    let digit4 = Math.floor(number[3]);
+// controllo che sia un numero e che sia di 4 cifre
+if (number.length != 4 || isNaN(number)){
 
-    
-    // somma 
-    sum = digit1 + digit2 + digit3 + digit4
-
+    // errore
+    alert("inserisci un numero valido.")
 }else {
-    // se non è a 4 cifre
-    alert("error");
+    
+    // creo un ciclo for
+    for (let i = 0; i < number.length; i++ ){
+    
+        // sommo tutti i numeri uno alla volta 
+        // con number converto la stringa in 4 cifre numeriche 
+        sum += Number(number[i]);
+    }
 }
+
+
 
 
 document.querySelector(".sum").innerHTML = `il tuo numero dà come somma di ogni cifra: ` + sum;
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
